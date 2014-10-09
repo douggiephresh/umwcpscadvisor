@@ -57,6 +57,14 @@
             <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="Submit Form" /></p>
           </div>
         </form>
+        
+        <form name = 'checktable' action = '/process' method = "Post">
+	<fieldset>
+	{% for i in class_name %}
+	<tr><td>{{i.name.tagline}}</td><td><input type="checkbox" name="ischecked" value ={{i.name.tagline}} ></td></tr>
+	<br><br>
+	{% endfor %}
+	</fieldset>
 
       </div>
     </div>
